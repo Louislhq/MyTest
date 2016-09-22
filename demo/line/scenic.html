@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>景区参考价格</title>
+    <link rel="stylesheet" type="text/css" href="/wap/dest/css/styles.css?v=222" media="all"/>
+	<script src="/wap/dest/js/all.js"></script>
+</head>
+<body class="page-scenic">
+	<div class="lt-box">
+		<header>
+			景点所在地：
+			<span class="select">全部</span>
+		</header>
+		<div class="scenic">
+			<div class="mod-sign">
+					<div class="sign">
+						<h1>鼓浪屿风景区</h1>
+					</div>
+					<div class="sign">
+						<span class="main">菽庄花园+日光岩+海底世界套票</span>
+						<i>999元/人</i>
+					</div>
+			</div>
+		</div>
+		<div class="scenic">
+			<div class="mod-sign">
+					<div class="sign">
+						<h1>胡里山炮台</h1>
+					</div>
+					<div class="sign">
+						<span class="main">成人票</span>
+						<i>999元/人</i>
+					</div>
+					<div class="sign">
+						<span class="main">成人票</span>
+						<i>999元/人</i>
+					</div>
+			</div>
+		</div>
+		<div class="scenic">
+			<div class="mod-sign">
+					<div class="sign">
+						<h1>鼓浪屿风景区</h1>
+					</div>
+					<div class="sign">
+						<span class="main">子景点A+子景点B+子景点C+子景点D+子景点E+子景点F</span>
+						<i>999元/人</i>
+					</div>
+					<div class="sign">
+						<span class="main">畅游鼓浪屿成人票B线（8:00-10:50间班次）含阿呆少爷酸奶、花茶、地图、盖章本专项</span>
+						<i>999元/人</i>
+					</div>
+			</div>
+		</div>
+	</div>
+	<div class="shade" style="display: none"></div>
+	<div class="place" style="display: none">
+			<ul>
+				<li><span class="cur">全部</span></li>
+				<li><span>福州</span></li>
+				<li><span>厦门</span></li>
+				<li><span>漳州</span></li>
+				<li><span>泉州</span></li>
+				<li><span>三明</span></li>
+				<li><span>莆田</span></li>
+				<li><span>南平</span></li>
+				<li><span>龙岩</span></li>
+				<li><span>宁德</span></li>
+				<li><span>平潭</span></li>
+			</ul>
+		</div>
+
+		<script type="text/javascript">
+			window.onload = function(){
+				var select = document.querySelector(".select");
+				var place = document.querySelector(".place");
+				var shade = document.querySelector(".shade");
+
+				select.addEventListener("touchend" , function(){
+					select.className = select.className + " " + "select-up";
+					shade.style.display = "block";
+					place.style.display = "block";
+				})
+			}
+		</script>
+</body>
+</html>

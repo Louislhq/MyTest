@@ -1,0 +1,38 @@
+.page-verify {
+	.iconcheck {
+		position: relative;
+		.rem(width,40);
+		.rem(height,40);
+		
+		background-color: #FFFFFF;
+		border: solid 2px #ff6600;
+		.border-radius(40);
+		display: inline-block;
+		-webkit-appearance: none; 
+		-webkit-flex: none;
+		-moz-flex: none;
+		-ms-flex: none;
+		flex:none;
+	}
+
+	.iconcheck:checked {
+		background-color: #ff6600;
+		border: solid 2px #ff6600;
+	}
+	.iconcheck:checked:before {
+		display: inline-block;
+		position: absolute;
+		.rem(top,-12);
+		.rem(left,-1);
+		font-family: "iconcheck";
+		content: "\e679";
+		color: #FFFFFF;
+		font-size: 18px;
+	}
+	.checkType {
+		i {
+			.rem(margin,0,20,0,16);
+			.rem(font-size,28);
+		}
+	}
+}

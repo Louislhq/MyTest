@@ -1,0 +1,35 @@
+.page-seal {
+	.seal {
+		.rem(height,335);
+		.rem(margin,60,0,70,0);
+		background-color: #fff;
+		display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+		display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+		display: -ms-flexbox;      /* TWEENER - IE 10 */
+		display: -webkit-flex;     /* NEW - Chrome */
+		display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+		-webkit-flex-direction: column;
+		-moz-flex-direction: column;
+		-moz-flex-direction: column;
+		flex-direction: column;
+		-webkit-box-orient: vertical;
+		-moz-box-orient: vertical;
+		box-orient: vertical;
+
+		
+		p {
+			.rem(font-size,28);
+			.rem(line-height,88);
+			text-align: center;
+		}
+		.seal-name {
+			img {
+			-webkit-box-flex: auto;
+			-moz-box-flex: auto;
+			-ms-flex: auto;
+			flex: auto;
+			width: 100%;
+		}
+		}
+	}
+}

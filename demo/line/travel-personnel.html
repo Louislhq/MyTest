@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>选择出游人员</title>
+    <link rel="stylesheet" type="text/css" href="/wap/dest/css/styles.css?v=222" media="all"/>
+	<script src="/wap/dest/js/all.js"></script>
+</head>
+<body class="page-verify page-contacts">
+	<div class="lt-box">
+		<h1 class="title">个人信息</h1>
+		<div class="info">
+			<div class="checkbox">
+				<input class="iconcheck" type="checkbox">
+			</div>
+			<div class="personnel">
+				<p class="name">张欣欣（男）</p>
+				<p>350583********0011</p>
+			</div>
+			<div>
+				<p class="type">成人</p>
+				<p>13960****66</p>
+			</div>
+		</div>
+		<h1 class="title">常用联系人</h1>
+		<div class="info">
+			<div class="checkbox">
+				<input class="iconcheck" type="checkbox">
+			</div>
+			<div class="personnel">
+				<p class="name">张欣欣（男）</p>
+				<p>350583********0011</p>
+			</div>
+			<div>
+				<p class="type">成人</p>
+				<p>13960****66</p>
+			</div>
+		</div>
+		<div class="info">
+			<div class="checkbox">
+				<input class="iconcheck" type="checkbox">
+			</div>
+			<div class="personnel">
+				<p class="name">张欣欣（男）</p>
+				<p>350583********0011</p>
+			</div>
+			<div>
+				<p class="type">成人</p>
+				<p>13960****66</p>
+			</div>
+		</div>
+		<div class="info">
+			<div class="checkbox">
+				<input class="iconcheck" type="checkbox">
+			</div>
+			<div class="personnel">
+				<p class="name">张欣欣（男）</p>
+				<p>350583********0011</p>
+			</div>
+			<div>
+				<p class="type">成人</p>
+				<p>13960****66</p>
+			</div>
+		</div>
+		
+		<div class="add">
+			<p><i class="icon-add"></i>添加常用联系人</p>
+		</div>
+		<div class="btn">
+				<span class="ui-btn ui-btn-disable">立即注册</span>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+
+	window.onload = function(){
+		var add = document.querySelector(".icon-add");
+		var inputCheck = document.getElementsByTagName('input');
+		var btnDiv = document.querySelector(".btn");
+		var btnSpan = btnDiv.querySelector(".ui-btn");
+	
+		//添加常用联系人
+		add.addEventListener("touchend" , function(){
+			window.location.href="/demo/contacts/add.html";
+		},false);
+
+			for(var i=0; i<inputCheck.length;i++) {
+				inputCheck[i].addEventListener("click" , function(){
+					checkbox();
+				});
+		}
+
+		function checkbox() {
+			for(var j=0; j<inputCheck.length;j++) {
+				if (inputCheck[j].checked == true) {
+					btnSpan.className = "ui-btn";
+					break;
+				} else {
+					btnSpan.className = btnSpan.className + " " + "ui-btn-disable";
+				}
+			}
+		}
+		
+		
+	}
+	</script>
+</body>
+</html>

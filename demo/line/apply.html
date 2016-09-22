@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>报名</title>
+    <link rel="stylesheet" type="text/css" href="/wap/dest/css/styles.css?v=222" media="all"/>
+	<script src="/wap/dest/js/all.js"></script>
+	<script src="/wap/dest/js/lib/calendar.js"></script>
+</head>
+<body class="page-verify page-apply">
+	<div class="lt-box">
+		<h1 class="title">确定报名信息</h1>
+		<div class="apply">
+			<div class="mod-sign">
+					<div class="sign">
+						<i>线路名</i>
+						<span class="main">厦门南普陀寺、鼓浪屿巴士1日游厦门南普陀寺、鼓浪屿巴士1</span>
+					</div>
+					<div class="sign">
+						<i>旅行社</i>
+						<span class="main">厦门建发国际旅行社</span>
+					</div>
+			</div>
+		</div>
+		<h1 class="title">合同签订</h1>
+		<div class="apply">
+			<div class="mod-sign">
+					<div class="sign">
+						<i class="fw">张欣欣欣</i>
+						<span class="main">350583********0011</span>
+					</div>
+			</div>
+		</div>
+		<h1 class="title">出游日期</h1>
+		<div class="apply">
+			<div class="mod-sign">
+					<div class="sign apply-info">
+						<span class="main">2016-09-08</span>
+						<i class="icon-date"></i>
+					</div>
+			</div>
+		</div>
+		<h1 class="title">出游人员</h1>
+		<div class="apply">
+			<div class="mod-sign">
+					<div class="sign tour">
+						<i class="fw">张欣欣欣（男）</i>
+						<i class="fw">成人</i>
+						<span class="main">350583********0011</span>
+					</div>
+			</div>
+		</div>
+		<!-- 没有选择出游人员显示 -->
+		<h1 class="title">出游人员</h1>
+		<div class="apply">
+			<div class="add-tuor">请点击“选择旅客”，添加出游人员</div>
+		</div>
+		<div class="add">
+			<p><i class="icon-add"></i>选择旅客</p>
+		</div>
+		<div class="apply">
+			<div class="mod-sign">
+				<div class="sign tour">
+					<span class="main">是否购买意外险</span>
+					<input class="iconcheck" type="checkbox" checked>
+				</div>
+			</div>
+		</div>
+		<div class="apply">
+			<div class="mod-sign">
+				<div class="sign tour">
+					<span class="main">我已详细阅读并知悉该线路的所有内容</span>
+					<input class="iconcheck" type="checkbox" >
+				</div>
+			</div>
+		</div>
+		<div class="apply">
+			<div class="mod-sign">
+				<div class="sign tour">
+					<i>总价格</i>
+					<span class="main"><em>210.50</em>元</span>
+				</div>
+			</div>
+		</div>
+		<div class="btn">
+				<span class="ui-btn">立即报名</span>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+
+	window.onload = function(){
+		var add = document.querySelector(".icon-add");
+		var date = document.querySelector(".icon-date");
+		var btnDiv = document.querySelector(".btn");
+		var btnSpan = btnDiv.querySelector(".ui-btn");
+		var btnDisable = btnDiv.querySelector(".ui-btn-disable");
+		var addTuor = document.querySelector(".add-tuor");
+
+		/*if (!addTuor) {
+			btnSpan.className = "ui-btn";
+		} else {
+			btnSpan.className = btnSpan.className + " " + "ui-btn-disable";
+		}
+*/
+		
+	
+		//添加常用联系人
+		add.addEventListener("touchend" , function(){
+			window.location.href="/demo/line/travel-personnel.html";
+		},false);
+
+		date.addEventListener("touchend" , function(){
+			var This = date;
+			
+			Ajax.request("/wap/date.json", 
+				{
+				success:function(xhr) {
+				var data = JSON.parse(xhr.responseText);
+				pickerEvent.setPriceArr(data);
+				pickerEvent.Init(This,"calendar");
+
+			}
+		});
+		});
+
+		btnSpan.addEventListener("touchend" , function(e){
+			e.preventDefault();
+			if (!btnDisable) {
+				swal({   
+					title: "确认报名",
+					text:"报名信息无误，并参加本条线路",     
+					showCancelButton: true, 
+					confirmButtonText: "确定",  
+					cancelButtonText: '取消',   
+					closeOnConfirm: false 
+				}, function(){ 
+					swal({
+						title:"您已成功报名",
+						confirmButtonText:"知道了"
+					}); 
+
+				});
+			}
+			
+		},false);
+	}
+	</script>
+</body>
+</html>

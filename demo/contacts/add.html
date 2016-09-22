@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>添加常用联系人</title>
+    <link rel="stylesheet" type="text/css" href="/wap/dest/css/styles.css?v=222" media="all"/>
+	<script src="/wap/dest/js/all.js"></script>
+</head>
+<body class="page-verify page-contacts">
+	<div class="lt-box">
+		<h1 class="title">联系人信息</h1>
+			<form class="contact">
+				<div class="mod-input">
+					<div class="input-row input-right">
+						<label class="label">
+							<i><em>*</em>用户姓名</i>
+							<input  type="text" class="input-clear" placeholder="请输入姓名">
+						</label>
+					</div>
+					<div class="input-row input-right">
+						<label class="label">
+							<i><em>*</em>证件号码</i>
+							<input  type="number" placeholder="请输入二代身份证">
+						</label>				
+					</div>
+					<div class="input-row input-right">
+						<label class="label">
+							<i>手机号码</i>
+							<input  type="number" placeholder="请输入手机号码">
+						</label>					
+					</div>
+					<div class="input-row input-right">
+						<div class="label">
+							<i><em>*</em>用户类型</i>
+							<div class="checkType">
+                               <input class="iconcheck" type="radio" name="sex" checked>
+                               <i>成人</i>
+                               <input class="iconcheck" type="radio" name="sex">
+                               <i>儿童</i>
+                          	</div>
+						</div>
+					</div>
+				</div>
+				<p class="remark">注：为方便电子合同签订，每个账号可进行多人实名认证</p>
+			</form>
+			<div class="btn">
+				<span class="ui-btn ui-btn-disable">立即验证</span>
+			</div>
+	</div>
+
+	<script type="text/javascript">
+
+	window.onload = function(){
+		var input = document.getElementsByTagName('input');
+		var inputName = input[0].value;
+		var inputCard = input[1].value;
+		var btnDiv = document.querySelector(".btn");
+		var btnReg = btnDiv.querySelector('.ui-btn');
+		var state = true;
+		
+		//判断是否都输入
+			document.addEventListener("input" , function(){
+				inputName = input[0].value;
+				inputCard = input[1].value;
+				if (inputName && inputCard) {
+					btnReg.className ='ui-btn';
+					state = false;
+				} else if ((!inputName || !inputCard) && !state) {
+					btnReg.className = btnReg.className + ' ' + 'ui-btn-disable';
+					state = true;
+				}
+			});
+
+
+		//error
+		function error() {
+			swal({
+				title: '实名验证不匹配',
+  				text: '请核对信息是否有误',
+				confirmButtonText:'知道了'
+			}); 
+		}
+
+	}
+	</script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+.page-line-details {
+	background-color: #f4f4f4;
+	.remark {
+		.rem(padding,30);
+		background-color: #fff;
+		border-top: 1px solid #e0e0e0;
+		border-bottom: 1px solid #e0e0e0;
+		color: #999;
+		em {
+			color: #333;
+		}
+	}
+	.line-info {
+		border-top: 1px solid #e0e0e0;
+	}
+	h1 {
+		.rem(height,88);
+		.rem(line-height,88);
+		.rem(font-size,28);
+		text-align: center;
+		i {
+			.rem(margin-bottom,-15);
+			.rem(margin-right,16);
+			//vertical-align: middle;
+		}
+	}
+	.price {
+		color: #ff6600;
+	}
+	.shop {
+		color: #32b16c;
+	}
+	.route {
+		color: #32b16c;
+	}
+	.car {
+		color: #009e96;
+		i {
+			.rem(margin-bottom,-10);
+		}
+	}
+	.dine {
+		color: #f19149;
+		i {
+			.rem(margin-bottom,-10);
+		}
+	}
+	.warn {
+		color: #ff5959;
+	}
+	.price-content {
+		background-color: #fff;
+		border-top: 1px solid #e0e0e0;
+		border-bottom: 1px solid #e0e0e0;
+		.main-left {
+			text-align: left;
+		}
+		em {
+			color: #ff6600;
+		}
+	}
+	.shop-content {
+		background-color: #fff;
+		border-top: 1px solid #e0e0e0;
+		border-bottom: 1px solid #e0e0e0;
+		.rem(padding,30);
+		span {
+			.rem(font-size,28);
+			.rem(line-height,46);
+		}
+	}
+	.route-content {
+		.rem(padding,30,30,0);
+		background-color: #fff;
+		border-top: 1px solid #e0e0e0;
+		border-bottom: 1px solid #e0e0e0;
+	}
+	.car-content {
+		.rem(padding,30);
+		background-color: #fff;
+		border-top: 1px solid #e0e0e0;
+		border-bottom: 1px solid #e0e0e0;
+	}
+	.dine-content {
+		.rem(padding,30);
+		background-color: #fff;
+		border-top: 1px solid #e0e0e0;
+		border-bottom: 1px solid #e0e0e0;
+
+		.dine-type {
+			span {
+				color: #f19149;
+				display: inline-block;
+				.rem(padding,0,20);
+				border: 1px solid #f19149;
+				.rem(border-radius,20);
+				.rem(margin-bottom,10);
+			}
+			p {
+				.rem(font-size,28);
+				.rem(line-height,46);
+				color: #666;
+			}
+			&:first-child {
+				.rem(padding-bottom,20);
+			}
+		}
+	}
+	.warn-content {
+		.rem(padding,30);
+		background-color: #fff;
+		border-top: 1px solid #e0e0e0;
+		border-bottom: 1px solid #e0e0e0;
+		p {
+			color: #666666;
+			.rem(font-size,28);
+			.rem(line-height,46);
+			.rem (padding-bottom,30);
+		}
+	}
+	.route-info {
+		display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+		display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+		display: -ms-flexbox;      /* TWEENER - IE 10 */
+		display: -webkit-flex;     /* NEW - Chrome */
+		display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+		-webkit-box-pack:justify;
+		-webkit-justify-content:space-between;
+		-ms-flex-pack:justify;
+		justify-content:space-between;
+	}
+	.route-left {
+		display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+		display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+		display: -ms-flexbox;      /* TWEENER - IE 10 */
+		display: -webkit-flex;     /* NEW - Chrome */
+		display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+		-webkit-box-direction: normal;
+		-webkit-box-orient: vertical;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+		flex-direction: column;
+		-webkit-box-pack:center;
+		-webkit-justify-content: center;
+		-ms-flex-pack:center;
+		justify-content: center;
+		/* -webkit-box-align: center;
+		-moz-align-items: center;
+		-webkit-align-items: center;
+		align-items: center; */
+		-webkit-flex:none;
+		flex:none;
+		.rem(margin-right,17);
+   		i {
+   			display: block;
+   			-webkit-flex:none;
+			flex: none;
+   		}
+		span {
+			display: block;
+			-webkit-flex:auto;
+			flex: auto;
+			position: relative;
+			&:before {
+				content: "";
+				height: 100%;
+				border-left: 1px dashed #999999;
+				position: absolute;
+				left: 50%;
+				//margin-left: -1px;
+			}
+		}
+	}
+	.route-right {
+		.rem(padding-bottom,70);
+		-webkit-flex:auto;
+		flex:auto;
+	}
+	.schedul {
+			display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+			display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+			display: -ms-flexbox;      /* TWEENER - IE 10 */
+			display: -webkit-flex;     /* NEW - Chrome */
+			display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+			.rem(padding-bottom,20);
+			span {
+				color: #666666;
+				.rem(font-size,28);
+				-webkit-flex:auto;
+				flex: auto;
+			}
+			i {
+				.rem(font-size,28);
+				font-weight: bold;
+				-webkit-flex:none;
+				flex: none;
+
+			}
+	}
+	.btn {
+		.rem(padding-top,70);
+		.ui-btn {
+			margin: 0;
+			.rem(border-radius,0);
+		}
+	}
+}

@@ -1,0 +1,43 @@
+.mod-sign {
+	.rem(padding,30);
+	.sign {
+		display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+		display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+		display: -ms-flexbox;      /* TWEENER - IE 10 */
+		display: -webkit-flex;     /* NEW - Chrome */
+		display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+		-webkit-box-pack:justify;
+		-webkit-justify-content:space-between;
+		-ms-flex-pack:justify;
+		justify-content:space-between;
+		.rem(font-size,28);
+		.rem(padding,10,0);
+		i {
+			display: block;
+			.rem(width,185);
+			font-weight: bold;
+			.rem(line-height,46);
+		}
+		span {
+			text-align: right;
+			.rem(width,505);
+			color: #666;
+			.rem(line-height,46);
+		}
+		h1 {
+			color: #666;
+			.rem(line-height,46);
+			font-weight: bold;
+		}
+		.fw {
+			font-weight: normal;
+		}
+	}
+	.sing-pact {
+			color: #00b7ff;
+			text-align: right;
+			span + span {
+				.rem(padding-left,40);
+			}
+		}
+}

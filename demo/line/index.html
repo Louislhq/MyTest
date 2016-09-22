@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>线路查询</title>
+    <link rel="stylesheet" type="text/css" href="/wap/dest/css/styles.css?v=222" media="all"/>
+	<script src="/wap/dest/js/all.js"></script>
+</head>
+<body class="page-search">
+	<div class="lt-box">
+		<div class="search">
+			<input type="text" name="">
+			<div>
+				<img src="/wap/dest/img/search.png" alt="png">
+			</div>
+		</div>
+		<ul class="search-info">
+			<li>厦门建发国际旅行社思明分店</li>
+			<li>厦门建发国际旅行社思明分店</li>
+			<li>厦门建发国际旅行社思明分店</li>
+			<li>厦门建发国际旅行社思明分店</li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+		window.onload = function(){
+			var search = document.querySelector(".search");
+			var searchInput = search.getElementsByTagName('input');
+			//获取输入框的值
+			var inputValue = searchInput[0].value;
+
+			//创建清除图标
+			var iconClear = document.createElement('i');
+			iconClear.className = 'iconfont' ;
+			iconClear.className = iconClear.className + ' ' + 'iconclear';
+			
+			//查询，显示清除图标
+			searchInput[0].addEventListener("input" , function(){
+				searchInput[0].parentNode.appendChild(iconClear);
+				inputValue = searchInput[0].value;
+				if (!inputValue) {
+					this.parentNode.removeChild(iconClear);
+				}
+			});
+
+			searchInput[0].addEventListener("focus", function(){
+				if (inputValue) {
+					searchInput[0].parentNode.appendChild(iconClear);
+				}
+			})
+			searchInput[0].addEventListener("blur", function(){
+				if (inputValue) {
+					this.parentNode.removeChild(iconClear);
+				}
+			})
+
+
+			//清空输入框
+			iconClear.addEventListener("touchend", function(){
+				searchInput[0].value = "";
+				inputValue = searchInput[0].value;
+				this.parentNode.removeChild(iconClear);
+			})
+
+
+		}
+	</script>
+</body>
+</html>

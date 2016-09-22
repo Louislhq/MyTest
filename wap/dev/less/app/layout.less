@@ -1,0 +1,143 @@
+/* 初始化默认设置 */
+body{background-color:#f4f4f4;width:100%;color:#333;user-select: none;
+	-webkit-user-select: none;}
+select,input{vertical-align:middle}
+fieldset,img{border:0 none}
+table{margin:0;border-collapse:collapse;border-spacing:0}
+button[disabled], html input[disabled] {cursor:default}
+a{
+	color:#333;
+	&:hover{
+		color:#f60
+	}
+}
+input,button,select,textarea{outline:none}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
+
+/* 布局  */
+
+.lt-box {
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  	display: -ms-flexbox;      /* TWEENER - IE 10 */
+  	display: -webkit-flex;     /* NEW - Chrome */
+  	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  	-webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+
+/* 按钮 */
+.ui-btn {
+	display: block;
+	color: #fff;
+	.rem(height,110);
+	.rem(line-height,110);
+	.rem(font-size,32);
+	text-align: center;
+	background-color: #ff6600;
+	.rem(border-radius,5);
+	.rem(margin,0,30);
+}
+/* 按钮禁用 */
+.ui-btn-disable {
+	background-color: #dddddd !important;
+	cursor:not-allowed !important;
+}
+
+/* 清除图标字体 */
+@font-face {font-family: "iconfont";
+  src:url('iconfont.ttf?t=1473057875') format('truetype'); /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+ 
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+  color: #cccccc;
+}
+.iconclear:before { content: "\e724"; }
+
+/*复选框 */
+@font-face {font-family: "iconcheck";
+  src:url('checkbox.ttf?t=1473214646') format('truetype'); /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+ 
+}
+.iconcheck {
+  font-family:"iconcheck" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* 禁用 */
+.disable {
+	color: #cccccc !important;
+	pointer-events: none;
+}
+
+header {
+		.rem(height, 60);
+		.rem(line-height, 60);
+		.rem(padding,0,0,0,30);
+		color: #666666;
+	}
+
+.remark {
+		//.rem(height, 60);
+		.rem(line-height, 60);
+		.rem(padding,0,0,0,30);
+		color: #666666;
+}
+
+.title {
+		.rem(height, 88);
+		.rem(line-height, 88);
+		.rem(padding,0,0,0,30);
+		color: #32b16c;
+}
+
+
+/* 编辑字体*/
+@font-face {font-family: "iconedit";
+  src: url('edit.ttf?t=1473305028') format('truetype');
+ 
+}
+
+.iconedit {
+  font-family:"iconedit" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.iconedit:before { content: "\e77d"; color: #fff;}
+
+
+.upload {
+	text-align: center;
+	.rem(height,44);
+	.rem(line-height,44);
+	.rem(margin,20,0);
+	i {
+		vertical-align: middle;
+		.rem(margin,-3,16,0,0);
+	}
+	span {
+		.rem(font-size,32);
+		color: #00b7ff;
+	}
+}
